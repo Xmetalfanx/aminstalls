@@ -12,12 +12,15 @@ function installApp {
         echo "Installing $app..."
         if command -v "$app" &>/dev/null; then
             echo "$app is already installed."
+            echo "If $app wasn't installed by am or appman, check your distro's package manager as that could be what is being detected"
+            sleep 2
         else
             $install "$app"
             if [ $? -eq 0 ]; then
                 echo "$app installed successfully."
             else
                 echo "Failed to install $app."
+                sleep 2
             fi
         fi
     done
