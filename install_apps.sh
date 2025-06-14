@@ -1,13 +1,52 @@
 #!/bin/bash
 
-browsers="floorp librewolf"
-common_apps="bitwarden freetube materialious deadbeef czkawka keepassxc stacer ente-auth"
-extras="responsively vscodium"
-unofficial_apps="brave strawberry"
-total_extras="etcher figma-linux gimp ungoogled-chromium ocenaudio libreoffice vcelestia firedragon warp-terminal mediaelch spotify-dl photogimp tabbyb tenacity zen-browser ente-auth"
+function assign_app_variables() {
+
+    browsers="floorp librewolf"
+    developer_apps="figma-linux responsively vscodium"
+    # this does not include "unofficial" marked browsers like brave (in am unofficial)
+    extra_browsers="brave firedragon ungoogled-chromium zen-browser"
+    # this also does not include "unofficial" marked apps like strawberry (in am unofficial)
+    multimedia_apps="deadbeef gimp mediaelch ocenaudio photogimp tenacity"
+    security_apps="bitwarden ente-auth keepassxc"
+    system_apps="czkawka etcher stacer"
+    terminal_apps="tabbyb warp-terminal"
+    youtube_apps="freetube materialious"
+    total_extras="celestia libreoffice nheko spotify-dl"
+    unofficial_apps="strawberry"
+
+}
+
+# the idea here is to detect if "am" or "appman is present"
+function am_version_detection() {
+
+    if command -v am >/dev/null 2>&1; then
+        install="am -ia --user"
+    elif command -v appman >/dev/null 2>&1; then
+        install="appman"
+    # Check if both 'am' and 'appman' are installed
+    elif command -v am >/dev/null 2>&1 && command -v appman >/dev/null 2>&1; then
+        echo "Error: Both 'am' and 'appman' are installed. Please resolve this conflict." 
+        exit 1
+    else
+        echo "Neither 'am' nor 'appman' is installed. Please install one of them to use this script."
+        exit 1
+    fi
+ 
+}
+
 
 function installApp {
-    install="am -ia --user"
+   
+    # Detect if am or appman is installed
+    am_version_detection
+
+    # Assign app variables
+    assign_app_variables
+
+   
+    # Use the install command based on am_version_detection results
+    
     for app in "$@"; do
         echo "Installing $app..."
         if command -v "$app" &>/dev/null; then
@@ -29,21 +68,29 @@ function installApp {
 }
 
 function installMenu() {
+    bold="\033[1m"
+    end_bold="\033[0m"
+    
+    
     clear
     x=1
     while [ $x -eq 1 ]; do
         echo "==========================="
         echo "AM - App Installer Menu"
         echo "==========================="
-        echo "Select apps to install:"
+        echo -e "\vSelect apps to install:\n "
 
-        echo "1) Browsers: $browsers"
-        echo "2) Commonly used apps: $common_apps"
-        echo "3) Extras: $extras"
-        echo "4) Unofficial apps: $unofficial_apps"
-        echo "5) Total extras: $total_extras"
+        echo -e "1) ${bold}Browsers:${end_bold} $browsers"
+        echo -e "2) ${bold}Developer apps:${end_bold} $developer_apps"
+        echo -e "3) ${bold}Multimedia apps:${end_bold} $multimedia_apps"
+        echo -e "4) ${bold}Security apps:${end_bold} $security_apps"
+        echo -e "5) ${bold}System apps:${end_bold} $system_apps"
+        echo -e "6) ${bold}Terminal apps:${end_bold} $terminal_apps"
+        echo -e "7) ${bold}YouTube apps:${end_bold} $youtube_apps"
+        echo -e "8) ${bold}Total extras:${end_bold} $total_extras"
+        echo -e "9) ${bold}Unofficial apps:${end_bold} $unofficial_apps"
         echo -e "\nQ) Quit"
-        echo -n "Please select an option (1-6): "
+        echo -n "Please select an option (1-9): "
         read -r choice
 
         case $choice in
@@ -53,24 +100,45 @@ function installMenu() {
             ;;
 
         2)
-            echo "Installing Commonly used apps: $common_apps"
-            installApp $common_apps
+            echo "Installing Developer apps: $developer_apps"
+            installApp $developer_apps
             ;;
 
         3)
-            echo "Installing Extras: $extras"
-            installApp $extras
+            echo "Installing Multimedia apps: $multimedia_apps"
+            installApp $multimedia_apps
             ;;
 
         4)
+            echo "Installing Security apps: $security_apps"
+            installApp $security_apps
+            ;;
+
+        5)
+            echo "Installing System apps: $system_apps"
+            installApp $system_apps
+            ;;
+
+        6)
+            echo "Installing Terminal apps: $terminal_apps"
+            installApp $terminal_apps
+            ;;
+
+        7)
+            echo "Installing YouTube apps: $youtube_apps"
+            installApp $youtube_apps
+            ;;
+
+        8)
+            echo "Installing Total extras: $total_extras"
+            installApp $total_extras
+            ;;
+
+        9)
             echo "Installing Unofficial apps: $unofficial_apps"
             installApp $unofficial_apps
             ;;
 
-        5)
-            echo "Installing Total Extras: $total_extras"
-            installApp $total_extras
-            ;;
         [Qq])
             echo "Exiting menu."
             x=0
