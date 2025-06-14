@@ -19,3 +19,6 @@ mkdir $amconfigdir
 
 echo "Opening Config file - type desired location of installed apps"
 micro ~/.config/appman/appman-config
+
+# removes installer
+rm AM-INSTALLER
