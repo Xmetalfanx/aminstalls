@@ -3,7 +3,7 @@
 amconfigdir=/home/$USER/.config/appman/
 
 echo "Downloading am"
-#wget -q https://raw.githubusercontent.com/ivan-hc/AM/main/AM-INSTALLER
+wget -q https://raw.githubusercontent.com/ivan-hc/AM/main/AM-INSTALLER
 sleep 2
 
 echo "Setting script to be executable"
@@ -18,7 +18,7 @@ mkdir $amconfigdir
 
 
 echo "Opening Config file - type desired location of installed apps"
-micro ~/.config/appman/appman-config
+micro ${amconfigdir}/appman-config
 
 # removes installer
 rm AM-INSTALLER
