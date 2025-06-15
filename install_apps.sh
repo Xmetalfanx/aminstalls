@@ -15,6 +15,9 @@ function assign_app_variables() {
     total_extras="celestia libreoffice nheko spotify-dl"
     unofficial_apps="strawberry"
 
+    xmetal_slim_apps="floorp librewolf freetube deadbeef"
+    xmetal_more_apps="materialious vscodium gitkraken responsively ocenaudio libreoffice nheko czkawka etcher stacer bitwarden ente-auth keepassxc"
+
 }
 
 # the idea here is to detect if "am" or "appman is present"
@@ -155,6 +158,17 @@ function installMenu() {
         11)
             echo "Installing Unofficial apps: $unofficial_apps"
             installApp $unofficial_apps
+            ;;
+
+        [Ss]) 
+            echo "Installing Xmetal slim selection apps: $xmetal_slim_apps"
+            installApp $xmetal_slim_apps
+            ;;
+
+        [Xx])
+            echo "Installing Xmetal selection apps: $xmetal_slim_apps $xmetal_more_apps"
+            installApp $xmetal_slim_apps
+            installApp $xmetal_more_apps
             ;;
 
         [Qq])
