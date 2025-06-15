@@ -1,10 +1,14 @@
 #!/bin/bash
 
+. config/install_am.cfg
+. config/install_apps.cfg
+
+sleep 1
 function mainMenu() {
     bold="\033[1m"
     end_bold="\033[0m"
 
-    clear
+    # clear
     x=1
     while [ $x -eq 1 ]; do
         echo "==========================="
@@ -20,12 +24,12 @@ function mainMenu() {
         case $choice in
         1)
             echo "Running AM installer..."
-            bash ./install_am.sh
+            install_am
             ;;
 
         2)
             echo "Running App installer..."
-            bash ./install_apps.sh
+            app_install_menu
             ;;
 
         [Qq])
