@@ -53,6 +53,8 @@
   - **xmetal_more_apps**
     - materialious vscodium gitkraken responsively ocenaudio libreoffice nheko czkawka etcher stacer bitwarden ente-auth keepassxc
 
+[Click here to see a more detailed explaination of the apps](apps.md)
+
 
 ## Credits
 

@@ -1,0 +1,75 @@
+- All Descriptions copied from https://portable-linux-apps.github.io/apps.html .. credit goes to them for that 
+
+- **browsers**
+  - [floorp](https://portable-linux-apps.github.io/apps/floorp.html)
+    - A privacy-focused browser based on Firefox with a customizable interface.
+  - [librewolf](https://portable-linux-apps.github.io/apps/librewolf.html)
+    - A Firefox-based browser emphasizing privacy and security.
+- **developer_apps** 
+  - [figma-linux](https://portable-linux-apps.github.io/apps/figma-linux.html)
+    - A desktop wrapper for Figma, a collaborative interface design tool.
+  - [gitkraken](https://portable-linux-apps.github.io/apps/gitkraken.html)
+    - A cross-platform Git client with an intuitive GUI.
+  - [responsively](https://portable-linux-apps.github.io/apps/responsively.html)
+    - A developer tool for responsive web design testing.
+  - [vscodium](https://portable-linux-apps.github.io/apps/vscodium.html)
+    - A lightweight version of Visual Studio Code for developers.
+- **extra_browsers** 
+  - [firedragon](https://portable-linux-apps.github.io/apps/firedragon.html)
+    - A hardened Firefox fork with enhanced privacy features.
+  - [ungoogled-chromium](https://portable-linux-apps.github.io/apps/ungoogled-chromium.html)
+    - A Chromium browser stripped of Google integration for better privacy.
+  - [zen-browser](https://portable-linux-apps.github.io/apps/zen-browser.html)
+    - A minimalistic browser focused on simplicity and speed.
+- **graphics_apps** 
+  - [gimp](https://portable-linux-apps.github.io/apps/gimp.html)
+    - A powerful open-source image editor.
+  - [photogimp](https://portable-linux-apps.github.io/apps/photogimp.html)
+    - A GIMP customization tailored for Photoshop users.
+  - [xnviewmp](https://portable-linux-apps.github.io/apps/xnviewmp.html)
+    - A versatile image viewer and converter.
+- **multimedia_apps** 
+  - [deadbeef](https://portable-linux-apps.github.io/apps/deadbeef.html)
+    - A lightweight music player supporting multiple formats.
+  - [mediaelch](https://portable-linux-apps.github.io/apps/mediaelch.html)
+    - A media manager for organizing movies and TV shows.
+  - [tenacity](https://portable-linux-apps.github.io/apps/tenacity.html)
+    - A fork of Audacity with improved privacy.
+- **security_apps** 
+  - [bitwarden](https://portable-linux-apps.github.io/apps/bitwarden.html)
+    - A secure and open-source password manager.
+  - [ente-auth](https://portable-linux-apps.github.io/apps/ente-auth.html)
+    - A secure authentication app for Ente services.
+  - [keepassx](https://portable-linux-apps.github.io/apps/keepassx.html)
+    - A lightweight password manager.
+- **system_apps** 
+  - [czkawka](https://portable-linux-apps.github.io/apps/czkawka.html)
+    - A fast and efficient duplicate file remover.
+  - [etcher](https://portable-linux-apps.github.io/apps/etcher.html)
+    - A tool for creating bootable USB drives.
+  - [stacer](https://portable-linux-apps.github.io/apps/stacer.html)
+    - A system monitoring and analysis tool.
+- **terminal_apps** 
+  - [tabby](https://portable-linux-apps.github.io/apps/tabby.html)
+    - A customizable terminal emulator.
+  - [warp-termina](https://portable-linux-apps.github.io/apps/warp-termina.html)
+    - A modern terminal with GPU acceleration.
+- **youtube_apps**
+  - [freetube](https://portable-linux-apps.github.io/apps/freetube.html)
+    - A privacy-focused YouTube client.
+  - [materialious](https://portable-linux-apps.github.io/apps/materialious.html)
+    - A Material Design-inspired YouTube client.
+- **total_extras**
+  - [celestia](https://portable-linux-apps.github.io/apps/celestia.html)
+    - A real-time 3D astronomy visualization tool.
+  - [libreoffice](https://portable-linux-apps.github.io/apps/libreoffice.html)
+    - A powerful open-source office suite.
+  - [nheko](https://portable-linux-apps.github.io/apps/nheko.html)
+    - A sleek Matrix chat client.
+- **Unofficial Apps**
+  - [brave](https://portable-linux-apps.github.io/apps/brave.html)
+    - A privacy-focused browser with built-in ad blocking.
+  - [ocenaudio](https://portable-linux-apps.github.io/apps/ocenaudio.html)
+    - A user-friendly audio editor.
+  - [strawberry](https://portable-linux-apps.github.io/apps/strawberry.html)
+    - A music player and library organizer.
